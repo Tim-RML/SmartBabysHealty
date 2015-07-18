@@ -4,14 +4,31 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    Button loginButon;
+    EditText userName,password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        loginButon=(Button)findViewById(R.id.bLogin);
+        userName=(EditText)findViewById(R.id.userNameField);
+        password=(EditText)findViewById(R.id.passField);
+
+        loginButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Not Implemented yet :) ", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
