@@ -1,6 +1,7 @@
 package com.example.toshiba.smartbabyshealty;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     Button loginButon;
     EditText userName,password;
@@ -23,12 +24,12 @@ public class MainActivity extends ActionBarActivity {
         userName=(EditText)findViewById(R.id.userNameField);
         password=(EditText)findViewById(R.id.passField);
 
-        loginButon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Not Implemented yet :) ", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        loginButon.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getApplicationContext(), "Not Implemented yet :) ", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     @Override
@@ -51,5 +52,10 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void MainMenuAct(View view){
+        Intent toMain = new Intent(this, MainMenu.class);
+        startActivity(toMain);
     }
 }
